@@ -9,12 +9,12 @@ body {
     width: 170px;
     height: 35px;
     outline: none;
-    border: none;
-    font-size: 18px;
-    border-radius: 2px;
     padding: 5px;
     background:teal;
     color:white;
+    border: none;
+    font-size: 18px;
+    border-radius: 2px;
     cursor: pointer;
     border: 1px solid white;
     border-radius: 5px;
@@ -28,22 +28,21 @@ body {
     font-size: 22px;
     transition: .5s;
     width:200px;
-    height:40px
-   
+    height:40px;
 }
 .colorGrid {
-    display: inline-block;
-    width: 20px;
     height: 20px;
     border-radius: 2px;
     background-color: white;
+    display: inline-block;
+    width: 20px;
+    
 }
 .selectedColor {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
-
 .colorValue {
     margin-left: 5px;
     font-weight: bold;

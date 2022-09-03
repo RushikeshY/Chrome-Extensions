@@ -7,7 +7,6 @@ btn.addEventListener('click', async () => {
         console.log('color: ', color);
     });
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
     chrome.scripting.executeScript(
         {
             target: { tabId: tab.id },
@@ -28,10 +27,10 @@ btn.addEventListener('click', async () => {
         }
     );
 });
-
+//outside work
 async function pickColor() {
     try {
-        // Picker
+     
         const eyeDropper = new EyeDropper();
         return await eyeDropper.open();
     } catch (err) {
