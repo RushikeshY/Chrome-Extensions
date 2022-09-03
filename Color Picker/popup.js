@@ -1,5 +1,5 @@
 const btn = document.querySelector('.changeColorBtn');
-const colorGrid = document.querySelector('.colorGrid');
+const GridColor = document.querySelector('.GridColor');
 const colorValue = document.querySelector('.colorValue');
 
 btn.addEventListener('click', async () => {
@@ -7,7 +7,6 @@ btn.addEventListener('click', async () => {
         console.log('color: ', color);
     });
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
     chrome.scripting.executeScript(
         {
             target: { tabId: tab.id },
@@ -17,7 +16,7 @@ btn.addEventListener('click', async () => {
             const [data] = injectionResults;
             if (data.result) {
                 const color = data.result.sRGBHex;
-                colorGrid.style.backgroundColor = color;
+                GridColor.style.backgroundColor = color;
                 colorValue.innerText = color;
                 try {
                     await navigator.clipboard.writeText(color);
@@ -28,10 +27,10 @@ btn.addEventListener('click', async () => {
         }
     );
 });
-
+//outside work
 async function pickColor() {
     try {
-        // Picker
+     
         const eyeDropper = new EyeDropper();
         return await eyeDropper.open();
     } catch (err) {
