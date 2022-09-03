@@ -1,0 +1,22 @@
+{
+    "name": "ThemeRevamp",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "This chrome extension helps us to change background color (invert color)",
+    "background": {
+        "scripts": [
+            "popup.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "ThemeRevamp",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+
+}

@@ -1,0 +1,50 @@
+body {
+    background: #f1f5f9;
+}
+.wrapper {
+    width: 300px;
+    text-align: center;
+}
+.changeColorBtn {
+    width: 170px;
+    height: 35px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 2px;
+    padding: 5px;
+    background:teal;
+    color:white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-left: 4%;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.changeColorBtn:hover{
+    background: yellowgreen;
+    color:white;
+    font-size: 22px;
+    transition: .5s;
+    width:200px;
+    height:40px
+   
+}
+.colorGrid {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: white;
+}
+.selectedColor {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.colorValue {
+    margin-left: 5px;
+    font-weight: bold;
+}
