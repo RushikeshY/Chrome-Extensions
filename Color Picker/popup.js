@@ -1,5 +1,5 @@
 const btn = document.querySelector('.changeColorBtn');
-const colorGrid = document.querySelector('.colorGrid');
+const GridColor = document.querySelector('.GridColor');
 const colorValue = document.querySelector('.colorValue');
 
 btn.addEventListener('click', async () => {
@@ -16,7 +16,7 @@ btn.addEventListener('click', async () => {
             const [data] = injectionResults;
             if (data.result) {
                 const color = data.result.sRGBHex;
-                colorGrid.style.backgroundColor = color;
+                GridColor.style.backgroundColor = color;
                 colorValue.innerText = color;
                 try {
                     await navigator.clipboard.writeText(color);
